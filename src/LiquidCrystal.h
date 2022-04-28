@@ -1,8 +1,8 @@
 #ifndef LiquidCrystal_h
 #define LiquidCrystal_h
 
-#include <inttypes.h>
-#include "Print.h"
+#include <cstdint>
+#include <string>
 
 // commands
 #define LCD_CLEARDISPLAY 0x01
@@ -42,7 +42,7 @@
 #define LCD_5x10DOTS 0x04
 #define LCD_5x8DOTS 0x00
 
-class LiquidCrystal : public Print {
+class LiquidCrystal {
 public:
   LiquidCrystal(uint8_t rs, uint8_t enable,
 		uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3,
@@ -80,10 +80,10 @@ public:
   void setRowOffsets(int row1, int row2, int row3, int row4);
   void createChar(uint8_t, uint8_t[]);
   void setCursor(uint8_t, uint8_t); 
-  virtual size_t write(uint8_t);
+  void write(uint8_t c);
+  void write(const std::string& str);
   void command(uint8_t);
   
-  using Print::write;
 private:
   void send(uint8_t, uint8_t);
   void write4bits(uint8_t);
