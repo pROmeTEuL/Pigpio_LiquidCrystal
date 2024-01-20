@@ -7,9 +7,9 @@ image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/
 image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml/badge.svg["Compile Examples status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml"]
 image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml/badge.svg["Spell Check status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml"]
 
-This library allows an Arduino board to control liquid crystal displays (LCDs) based on the Hitachi HD44780 (or a compatible) chipset, which is found on most text-based LCDs.
+This library allows an RaspberryPI board to control liquid crystal displays (LCDs) using PIGpio. It is based on the Hitachi HD44780 (or a compatible) chipset, which is found on most text-based LCDs.
 
-For more information about this library please visit us at
+For more information about the arduino library please visit at
 
 https://www.arduino.cc/en/Reference/{repository-name}
 
